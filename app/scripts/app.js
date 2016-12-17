@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'config'
   ])
   .config(function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
@@ -31,4 +32,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })

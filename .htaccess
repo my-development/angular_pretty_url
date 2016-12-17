@@ -1,0 +1,5 @@
+Options -Multiviews
+PassengerResolveSymlinksInDocumentRoot on
+RewriteEngine On
+        RewriteCond %{HTTP_HOST} ^angular.shopaide.com$
+        RewriteRule ^(.*)$ http://angular.shopaide.com:5000/$1 [L,R=302]

@@ -1,0 +1,8 @@
+[0mGET /tshirts [36m304 [0m11.888 ms - -[0m
+[0mPOST /tshirt [32m200 [0m198.366 ms - 175[0m
+[0mGET /tshirts [32m200 [0m4.685 ms - 152[0m
+[0mDELETE /tshirt/54664dd3efb4d9ec1a0db931 [32m200 [0m5.644 ms - 15[0m
+[0mGET /tshirts [32m200 [0m1.080 ms - 2[0m
+[0mPOST /tshirt [32m200 [0m45.241 ms - 175[0m
+[0mGET /tshirts [32m200 [0m8.708 ms - 152[0m
+[0mDELETE /tshirt/54664e1a9e3cfcf01aac491f [32m200 [0m7.595 ms - 15[0m

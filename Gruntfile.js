@@ -9,6 +9,11 @@
 
 module.exports = function (grunt) {
 
+  var env_path = process.env.PATH;
+  var prod_path = process.env.PATH;
+
+  //console.log(env_path);
+
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
@@ -65,6 +70,38 @@ module.exports = function (grunt) {
       }
     },
 
+    //set env
+    ngconstant: {
+  // Options for all targets
+        options: {
+          space: '  ',
+          wrap: '"use strict";\n\n {%= __ngModule %}',
+          name: 'config',
+        },
+        // Environment targets
+        development: {
+          options: {
+            dest: '<%= yeoman.app %>/scripts/config.js'
+          },
+          constants: {
+            ENV: {
+              name: 'development',
+              apiEndpoint: env_path
+            }
+          }
+        },
+        production: {
+          options: {
+            dest: '<%= yeoman.dist %>/scripts/config.js'
+          },
+          constants: {
+            ENV: {
+              name: 'production',
+              apiEndpoint: prod_path || 'production _url default'
+            }
+          }
+        }
+      },
     // The actual grunt server settings
     connect: {
       options: {
@@ -372,6 +409,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'ngconstant:development', // ADD THIS
       'wiredep',
       'concurrent:server',
       'autoprefixer',
@@ -395,6 +433,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'ngconstant:production', // ADD THIS
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
