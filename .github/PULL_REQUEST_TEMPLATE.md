@@ -1,13 +1,11 @@
-### SOX
-[Ticket](######)
 
-- [ ] Have you attached the ticket to this PR?
+### Description
+[TIX-#####](https://jira.mlbam.com/browse/TIX-#####)
+
+- [ ] Have you attached the JIRA ticket number to this PR?
 
 ### Testing
-- [ ] Did you add tests?
+- [ ] Did you add unit tests?
 
 ### General
-- [ ] Have you notified Data of any migrations?
-
-### Security
-- [ ] Are you validating user input?
+- [ ] Any screen shots?
